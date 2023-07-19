@@ -1,7 +1,7 @@
 """Manage the power modes of the micro:bit (V2 only).
 """
 
-from microbit import MicroBitDigitalPin, Button
+from calliope import MicroBitDigitalPin, Button
 from typing import Optional, Tuple, Union
 
 def off() -> None:
@@ -48,6 +48,6 @@ def deep_sleep(
 
     :param ms: A time in milliseconds to wait before it wakes up.
     :param wake_on: A single instance or a tuple of pins and/or buttons to wake up the board, e.g. ``deep_sleep(wake_on=button_a)`` or ``deep_sleep(wake_on=(pin0, pin2, button_b))``.
-    :param run_every: A boolean to configure if the functions scheduled with ``microbit.run_every`` will continue to run while it sleeps.
+    :param run_every: A boolean to configure if the functions scheduled with ``calliope.run_every`` will continue to run while it sleeps.
     """
     ...

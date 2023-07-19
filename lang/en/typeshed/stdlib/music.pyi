@@ -2,7 +2,7 @@
 """
 from typing import Optional, Tuple, Union, List
 
-from .microbit import MicroBitDigitalPin, pin0
+from .calliope import MicroBitDigitalPin, pin0
 
 DADADADUM: Tuple[str, ...]
 """Melody: the opening to Beethoven’s 5th Symphony in C minor."""

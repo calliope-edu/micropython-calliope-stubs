@@ -2,7 +2,7 @@
 """
 
 from _typeshed import WriteableBuffer
-from ..microbit import MicroBitDigitalPin
+from ..calliope import MicroBitDigitalPin
 from typing import Optional, Union
 
 ODD: int

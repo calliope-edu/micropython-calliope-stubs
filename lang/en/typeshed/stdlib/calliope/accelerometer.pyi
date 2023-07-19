@@ -100,7 +100,7 @@ def get_gestures() -> Tuple[str, ...]:
 
     Gestures are not updated in the background so there needs to be constant
     calls to some accelerometer method to do the gesture detection. Usually
-    gestures can be detected using a loop with a small :func:`microbit.sleep` delay.
+    gestures can be detected using a loop with a small :func:`calliope.sleep` delay.
 
     :return: The history as a tuple, most recent last.
     """

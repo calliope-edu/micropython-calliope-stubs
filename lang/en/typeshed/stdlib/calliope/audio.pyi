@@ -1,7 +1,7 @@
 """Play sounds using the micro:bit (import ``audio`` for V1 compatibility).
 """
 
-from ..microbit import MicroBitDigitalPin, Sound, pin0
+from ..calliope import MicroBitDigitalPin, Sound, pin0
 from typing import ClassVar, Iterable, Union
 
 def play(

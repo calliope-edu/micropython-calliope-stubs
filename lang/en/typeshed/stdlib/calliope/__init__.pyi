@@ -120,7 +120,7 @@ def sleep(n: float) -> None:
 
     One second is 1000 milliseconds, so::
 
-        microbit.sleep(1000)
+        calliope.sleep(1000)
 
     will pause the execution for one second.
     """

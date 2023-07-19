@@ -2,7 +2,7 @@
 """
 
 from typing import Optional
-from .microbit import MicroBitDigitalPin, pin0
+from .calliope import MicroBitDigitalPin, pin0
 
 def translate(words: str) -> str:
     """Translate English words to phonemes.

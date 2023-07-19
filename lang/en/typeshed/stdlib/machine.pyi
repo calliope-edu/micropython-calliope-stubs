@@ -1,7 +1,7 @@
 """Low-level utilities.
 """
 from typing import Any
-from .microbit import MicroBitDigitalPin
+from .calliope import MicroBitDigitalPin
 
 def unique_id() -> bytes:
     """Get a byte string with a unique identifier of a board.

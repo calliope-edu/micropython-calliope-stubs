@@ -1,6 +1,6 @@
 """Individually addressable RGB and RGBW LED strips.
 """
-from .microbit import MicroBitDigitalPin
+from .calliope import MicroBitDigitalPin
 from typing import Tuple
 
 class NeoPixel:

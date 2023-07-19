@@ -1,7 +1,7 @@
 """Show text, images and animations on the 5×5 LED display.
 """
 
-from ..microbit import Image
+from ..calliope import Image
 from typing import Union, overload, Iterable
 
 def get_pixel(x: int, y: int) -> int:
