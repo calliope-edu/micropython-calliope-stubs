@@ -1,7 +1,7 @@
-"""Play sounds using the micro:bit (import ``audio`` for V1 compatibility).
+"""Play sounds using the Calliope mini (import ``audio`` for V1,V2 compatibility).
 """
 
-# Re-export for V1 compatibility.
+# Re-export for V1,V2 compatibility.
 from .calliope.audio import (
     is_playing as is_playing,
     play as play,

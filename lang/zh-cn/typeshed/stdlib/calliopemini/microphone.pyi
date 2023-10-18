@@ -1,4 +1,4 @@
-"""Respond to sound using the built-in microphone (V2 only).
+"""Respond to sound using the built-in microphone (V3 only).
 """
 
 from typing import Optional, Tuple

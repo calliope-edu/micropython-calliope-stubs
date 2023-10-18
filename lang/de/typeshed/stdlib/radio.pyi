@@ -85,7 +85,7 @@ def send(message: str) -> None:
 Example: ``radio.send('hello')``
 
 This is the equivalent of ``radio.send_bytes(bytes(message, 'utf8'))`` but with ``b'\x01\x00\x01'``
-prepended to the front (to make it compatible with other platforms that target the micro:bit).
+prepended to the front (to make it compatible with other platforms that target the Calliope mini).
 
 :param message: The string to send."""
     ...
@@ -97,7 +97,7 @@ Example: ``radio.receive()``
 
 Equivalent to ``str(receive_bytes(), 'utf8')`` but with a check that the the first
 three bytes are ``b'\x01\x00\x01'`` (to make it compatible with other platforms that
-may target the micro:bit).
+may target the Calliope mini).
 
 :return: The message with the prepended bytes stripped and converted to a string.
 
@@ -124,7 +124,7 @@ For example::
         msg, rssi, timestamp = details
 
 This function is useful for providing information needed for triangulation
-and/or trilateration with other micro:bit devices.
+and/or trilateration with other Calliope mini devices.
 
 :return: ``None`` if there is no message, otherwise a tuple of length three with the bytes, strength and timestamp values."""
     ...

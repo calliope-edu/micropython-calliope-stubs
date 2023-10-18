@@ -1,4 +1,4 @@
-"""Make the micro:bit talk, sing and make other speech like sounds.
+"""Make the Calliope mini talk, sing and make other speech like sounds.
 """
 
 from typing import Optional
@@ -39,7 +39,7 @@ def pronounce(
     :param mouth: A number representing the mouth of the voice
     :param throat: A number representing the throat of the voice
     :param pin: Optional argument to specify the output pin can be used to override the default of ``pin0``.
-    If we do not want any sound to play out of the pins can use ``pin=None``. micro:bit V2 only.
+    If we do not want any sound to play out of the pins can use ``pin=None``. Calliope mini V3 only.
 
     Override the optional pitch, speed, mouth and throat settings to change the
     timbre (quality) of the voice.
@@ -66,7 +66,7 @@ def say(
     :param mouth: A number representing the mouth of the voice
     :param throat: A number representing the throat of the voice
     :param pin: Optional argument to specify the output pin can be used to override the default of ``pin0``.
-    If we do not want any sound to play out of the pins can use ``pin=None``. micro:bit V2 only.
+    If we do not want any sound to play out of the pins can use ``pin=None``. Calliope mini V3 only.
 
     The result is semi-accurate for English. Override the optional pitch, speed,
     mouth and throat settings to change the timbre (quality) of the voice.
@@ -96,7 +96,7 @@ def sing(
     :param mouth: A number representing the mouth of the voice
     :param throat: A number representing the throat of the voice
     :param pin: Optional argument to specify the output pin can be used to override the default of ``pin0``.
-    If we do not want any sound to play out of the pins can use ``pin=None``. micro:bit V2 only.
+    If we do not want any sound to play out of the pins can use ``pin=None``. Calliope mini V3 only.
 
     Override the optional pitch, speed, mouth and throat settings to change
     the timbre (quality) of the voice.

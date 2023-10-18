@@ -5,7 +5,7 @@ from typing import Any, Callable, List, Optional, Tuple, Union, overload
 
 from _typeshed import ReadableBuffer
 
-# V2 only
+# V3 only
 from . import accelerometer as accelerometer
 from . import audio as audio
 from . import compass as compass
@@ -24,7 +24,7 @@ def run_every(
     s: int = 0,
     ms: int = 0,
 ) -> Callable[[Callable[[], None]], Callable[[], None]]:
-    """Schedule to run a function at the interval specified by the time arguments **V2 only**.
+    """Schedule to run a function at the interval specified by the time arguments **V3 only**.
 
     Example: ``run_every(my_logging, min=5)``
 
@@ -132,7 +132,7 @@ def running_time() -> int:
     """
 
 def temperature() -> int:
-    """Get the temperature of the micro:bit in degrees Celcius."""
+    """Get the temperature of the Calliope mini in degrees Celcius."""
 
 def set_volume(v: int) -> None:
     """Sets the volume.
@@ -143,7 +143,7 @@ def set_volume(v: int) -> None:
 
     Out of range values will be clamped to 0 or 255.
 
-    **V2** only.
+    **V3** only.
     """
     ...
 
@@ -279,7 +279,7 @@ class MicroBitTouchPin(MicroBitAnalogDigitalPin):
         Example: ``pin0.is_touched()``
 
         The default touch mode for the pins on the edge connector is ``resistive``.
-        The default for the logo pin **V2** is ``capacitive``.
+        The default for the logo pin **V3** is ``capacitive``.
 
         **Resistive touch**
         This test is done by measuring how much resistance there is between the
@@ -302,7 +302,7 @@ class MicroBitTouchPin(MicroBitAnalogDigitalPin):
         Example: ``pin0.set_touch_mode(pin0.CAPACITIVE)``
 
         The default touch mode for the pins on the edge connector is
-        ``resistive``. The default for the logo pin **V2** is ``capacitive``.
+        ``resistive``. The default for the logo pin **V3** is ``capacitive``.
 
         :param value: ``CAPACITIVE`` or ``RESISTIVE`` from the relevant pin.
         """
@@ -369,10 +369,10 @@ pin20: MicroBitDigitalPin
 """Pin with digital features."""
 
 pin_logo: MicroBitTouchPin
-"""A touch sensitive logo pin on the front of the micro:bit, which by default is set to capacitive touch mode."""
+"""A touch sensitive logo pin on the front of the Calliope mini, which by default is set to capacitive touch mode."""
 
 pin_speaker: MicroBitAnalogDigitalPin
-"""A pin to address the micro:bit speaker.
+"""A pin to address the Calliope mini speaker.
 
 This API is intended only for use in Pulse-Width Modulation pin operations e.g. pin_speaker.write_analog(128).
 """
@@ -405,7 +405,7 @@ pin_M_MODE:   MicroBitDigitalPin
 """Pin with digital features."""
 
 class Image:
-    """An image to show on the micro:bit LED display.
+    """An image to show on the Calliope mini LED display.
 
     Given an image object it's possible to display it via the ``display`` API::
 

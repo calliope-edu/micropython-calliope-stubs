@@ -24,9 +24,9 @@ def init(
     Example: ``uart.init(115200, tx=pin0, rx=pin1)``
 
     :param baudrate: The speed of communication.
-    :param bits: The size of bytes being transmitted. micro:bit only supports 8.
+    :param bits: The size of bytes being transmitted. Calliope mini only supports 8.
     :param parity: How parity is checked, ``None``, ``uart.ODD`` or ``uart.EVEN``.
-    :param stop: The number of stop bits, has to be 1 for micro:bit.
+    :param stop: The number of stop bits, has to be 1 for Calliope mini.
     :param tx: Transmitting pin.
     :param rx: Receiving pin.
 

@@ -124,7 +124,7 @@ Example: ``set_volume(127)``
 
 Out of range values will be clamped to 0 or 255.
 
-**V2** only."""
+**V3** only."""
     ...
 
 class Button:
@@ -253,7 +253,7 @@ class MicroBitTouchPin(MicroBitAnalogDigitalPin):
 Example: ``pin0.is_touched()``
 
 The default touch mode for the pins on the edge connector is ``resistive``.
-The default for the logo pin **V2** is ``capacitive``.
+The default for the logo pin **V3** is ``capacitive``.
 
 **Resistive touch**
 This test is done by measuring how much resistance there is between the
@@ -276,7 +276,7 @@ does not require you to make a ground connection as part of a circuit.
 Example: ``pin0.set_touch_mode(pin0.CAPACITIVE)``
 
 The default touch mode for the pins on the edge connector is
-``resistive``. The default for the logo pin **V2** is ``capacitive``.
+``resistive``. The default for the logo pin **V3** is ``capacitive``.
 
 :param value: ``CAPACITIVE`` oder ``RESISTIVE`` von dem entsprechenden Pin."""
         ...

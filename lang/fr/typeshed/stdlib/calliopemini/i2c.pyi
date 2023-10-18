@@ -16,10 +16,10 @@ def init(
     :param sda: ``sda`` pin (default 20)
     :param scl: ``scl`` pin (default 19)
 
-    On a micro:bit V1 board, changing the I²C pins from defaults will make
+    On a Calliope mini V1,V2 board, changing the I²C pins from defaults will make
     the accelerometer and compass stop working, as they are connected
-    internally to those pins. This warning does not apply to the **V2**
-    revision of the micro:bit as this has `separate I²C lines <https://tech.calliope.org/hardware/i2c/>`_
+    internally to those pins. This warning does not apply to the **V3**
+    revision of the Calliope mini as this has `separate I²C lines <https://tech.calliope.org/hardware/i2c/>`_
     for the motion sensors and the edge connector.
     """
     ...

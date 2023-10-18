@@ -1,4 +1,4 @@
-"""Communicate between micro:bits with the built-in radio.
+"""Communicate between Calliope minis with the built-in radio.
 """
 
 from _typeshed import WriteableBuffer
@@ -51,7 +51,7 @@ def config(
     :param power: (default=6) is an integer value from 0 to 7 (inclusive) to indicate the strength of signal used when broadcasting a message.
     The higher the value the stronger the signal, but the more power is consumed by the device. The numbering translates to positions in the following list of dBm (decibel milliwatt) values: -30, -20, -16, -12, -8, -4, 0, 4.
     :param address: (default=0x75626974) an arbitrary name, expressed as a 32-bit address, that's used to filter incoming packets at the hardware level, keeping only those that match the address you set.
-    The default used by other micro:bit related platforms is the default setting used here.
+    The default used by other Calliope mini related platforms is the default setting used here.
     :param group: (default=0) an 8-bit value (0-255) used with the ``address`` when filtering messages.
     Conceptually, "address" is like a house/office address and "group" is like the person at that address to which you want to send your message.
     :param data_rate: (default=``radio.RATE_1MBIT``) indicates the speed at which data throughput takes place.
@@ -104,7 +104,7 @@ def send(message: str) -> None:
     Example: ``radio.send('hello')``
 
     This is the equivalent of ``radio.send_bytes(bytes(message, 'utf8'))`` but with ``b'\x01\x00\x01'``
-    prepended to the front (to make it compatible with other platforms that target the micro:bit).
+    prepended to the front (to make it compatible with other platforms that target the Calliope mini).
 
     :param message: The string to send.
     """
@@ -117,7 +117,7 @@ def receive() -> Optional[str]:
 
     Equivalent to ``str(receive_bytes(), 'utf8')`` but with a check that the the first
     three bytes are ``b'\x01\x00\x01'`` (to make it compatible with other platforms that
-    may target the micro:bit).
+    may target the Calliope mini).
 
     :return: The message with the prepended bytes stripped and converted to a string.
 
@@ -145,7 +145,7 @@ def receive_full() -> Optional[Tuple[bytes, int, int]]:
             msg, rssi, timestamp = details
 
     This function is useful for providing information needed for triangulation
-    and/or trilateration with other micro:bit devices.
+    and/or trilateration with other Calliope mini devices.
 
     :return: ``None`` if there is no message, otherwise a tuple of length three with the bytes, strength and timestamp values.
     """

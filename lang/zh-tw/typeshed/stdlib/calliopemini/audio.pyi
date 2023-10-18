@@ -1,4 +1,4 @@
-"""Play sounds using the micro:bit (import ``audio`` for V1 compatibility).
+"""Play sounds using the Calliope mini (import ``audio`` for V1,V2 compatibility).
 """
 
 from ..calliope import MicroBitDigitalPin, Sound, pin0
@@ -17,7 +17,7 @@ def play(
     :param source: A built-in ``Sound`` such as ``Sound.GIGGLE``, a ``SoundEffect`` or sample data as an iterable of ``AudioFrame`` objects.
     :param wait: If ``wait`` is ``True``, this function will block until the sound is complete.
     :param pin: An optional argument to specify the output pin can be used to  override the default of ``pin0``. If we do not want any sound to play we can use ``pin=None``.
-    :param return_pin: Specifies a differential edge connector pin to connect to an external speaker instead of ground. This is ignored for the **V2** revision.
+    :param return_pin: Specifies a differential edge connector pin to connect to an external speaker instead of ground. This is ignored for the **V3** revision.
     """
 
 def is_playing() -> bool:

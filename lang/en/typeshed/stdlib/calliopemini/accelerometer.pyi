@@ -1,4 +1,4 @@
-"""Measure the acceleration of the micro:bit and recognise gestures.
+"""Measure the acceleration of the Calliope mini and recognise gestures.
 """
 
 from typing import Tuple

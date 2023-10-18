@@ -48,7 +48,7 @@ The ``wait``, ``loop`` and ``clear`` arguments must be specified using their key
 def scroll(text: Union[str, float, int], delay: int=150, wait: bool=True, loop: bool=False, monospace: bool=False) -> None:
     """Scrolls a number or text on the LED display.
 
-Example: ``display.scroll('micro:bit')``
+Example: ``display.scroll('Calliope mini')``
 
 :param text: The string to scroll. If ``text`` is an integer or float it is first converted to a string using ``str()``.
 :param delay: The ``delay`` parameter controls how fast the text is scrolling.

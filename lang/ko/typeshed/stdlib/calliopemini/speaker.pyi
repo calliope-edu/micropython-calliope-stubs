@@ -1,4 +1,4 @@
-"""Control the built-in speaker (V2 only).
+"""Control the built-in speaker (V3 only).
 """
 
 def off() -> None:

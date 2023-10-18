@@ -1,4 +1,4 @@
-"""Manage the power modes of the micro:bit (V2 only).
+"""Manage the power modes of the Calliope mini (V3 only).
 """
 
 from calliope import MicroBitDigitalPin, Button
@@ -12,7 +12,7 @@ def off() -> None:
     This is the equivalent to pressing the reset button for a few seconds,
     to set the board in "Off mode".
 
-    The micro:bit will only wake up if the reset button is pressed or,
+    The Calliope mini will only wake up if the reset button is pressed or,
     if on battery power, when a USB cable is connected.
 
     When the board wakes up it will start for a reset state, so your program
@@ -27,7 +27,7 @@ def deep_sleep(
     ] = None,
     run_every: bool = True,
 ) -> None:
-    """Set the micro:bit into a low power mode where it can wake up and continue operation.
+    """Set the Calliope mini into a low power mode where it can wake up and continue operation.
 
     Example: ``power.deep_sleep(wake_on=(button_a, button_b))``
 
