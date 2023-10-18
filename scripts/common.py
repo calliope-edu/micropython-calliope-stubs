@@ -30,11 +30,11 @@ def get_source(file_path):
 def module_name_for_path(file_path: str):
     """Hacky determination of the module name."""
     name = os.path.basename(file_path)
-    in_microbit_package = os.path.basename(os.path.dirname(file_path)) == "microbit"
+    in_microbit_package = os.path.basename(os.path.dirname(file_path)) == "calliopemini"
     if in_microbit_package:
         if name == "__init__.pyi":
-            return "microbit"
-        return ".".join(["microbit", os.path.splitext(name)[0]])
+            return "calliopemini"
+        return ".".join(["calliopemini", os.path.splitext(name)[0]])
     return os.path.splitext(name)[0]
 
 

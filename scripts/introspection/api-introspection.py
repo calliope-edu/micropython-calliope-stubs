@@ -15,7 +15,7 @@ modules = [
     "gc",
     "machine",
     "math",
-    "microbit",
+    "calliope",
     "micropython",
     "music",
     "neopixel",

@@ -22,7 +22,7 @@ modules = [
     "log",
     "machine",
     "math",
-    "microbit",
+    "calliope",
     "micropython",
     "music",
     "neopixel",

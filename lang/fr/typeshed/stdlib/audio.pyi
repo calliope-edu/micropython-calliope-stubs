@@ -2,7 +2,7 @@
 """
 
 # Re-export for V1 compatibility.
-from .microbit.audio import (
+from .calliope.audio import (
     is_playing as is_playing,
     play as play,
     stop as stop,

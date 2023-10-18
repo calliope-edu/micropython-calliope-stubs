@@ -23,7 +23,7 @@ modules = [
     "log",
     "machine",
     "math",
-    "microbit",
+    "calliopemini",
     "micropython",
     "music",
     "neopixel",
@@ -82,8 +82,8 @@ def get_docstrings_dict(ts_file: TypeshedFile):
 
 
 def pretty_api_name(name):
-    # Remove prefixed microbit.foo names as it's better just to translate the important part.
-    return name.replace("_", " ").strip().lower().replace("microbit.", "")
+    # Remove prefixed calliope.foo names as it's better just to translate the important part.
+    return name.replace("_", " ").strip().lower().replace("calliope.", "")
 
 
 def get_entries(node, name, key):

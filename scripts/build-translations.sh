@@ -5,10 +5,10 @@
 
 set -euxo pipefail
 
-languages="ca fr es-ES ja ko nl zh-CN zh-TW"
+languages="ca de es-es fr ja ko nl zh-cn zh-tw"
 
 for language in $languages; do
-    lower="${language,,}"
+    lower="${language}"
     rm -rf "lang/${lower}"
     cp -r lang/en "lang/${lower}"
 done
