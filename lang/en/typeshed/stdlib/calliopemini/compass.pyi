@@ -12,7 +12,7 @@ def calibrate() -> None:
     ...
 
 def is_calibrated() -> bool:
-    """Check is the compass is calibrated.
+    """Check if the compass is calibrated.
 
     Example: ``compass.is_calibrated()``
 
