@@ -73,7 +73,7 @@ def choice(seq: Sequence[_T]) -> _T:
     ...
 
 def random() -> float:
-    """Generate a random floating point number in the range [0.0, 1.0).
+    """Generate a random floating point number in the range [0.0, 1.0].
 
     Example: ``random.random()``
 
