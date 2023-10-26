@@ -20,7 +20,7 @@ def init(
 
     :param baudrate: The speed of communication.
     :param bits: The width in bits of each transfer. Currently only ``bits=8`` is supported. However, this may change in the future.
-    :param mode: Determines the combination of clock polarity and phase - `see online table <https://microbit-micropython.readthedocs.io/en/v2-docs/spi.html#microbit.spi.init>`_.
+    :param mode: Determines the combination of clock polarity and phase - `see online table <https://calliope.cc/programmieren/editoren/python/python-api#spiinit>`_.
     :param sclk: sclk pin (default 13)
     :param mosi: mosi pin (default 15)
     :param miso: miso pin (default 14)
