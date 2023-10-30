@@ -1,36 +1,36 @@
-"""System specific functions"""
+"""Systemspezifische Funktionen"""
 from typing import Any, Dict, List, NoReturn, TextIO, Tuple
 
 def exit(retval: object=...) -> NoReturn:
-    """Terminate current program with a given exit code.
+    """Beendet das aktuelle Programm mit einem bestimmten Exit-Code.
 
 Example: ``sys.exit(1)``
 
 This function raises a ``SystemExit`` exception. If an argument is given, its
 value given as an argument to ``SystemExit``.
 
-:param retval: The exit code or message."""
+:param retval: Exit-Code oder Meldung."""
     ...
 
 def print_exception(exc: Exception) -> None:
-    """Print an exception with a traceback.
+    """Eine Ausnahme mit einem Traceback ausgeben.
 
 Example: ``sys.print_exception(e)``
 
-:param exc: The exception to print
+:param exc: Die Ausnahme für die Ausgabe
 
 This is simplified version of a function which appears in the
 ``traceback`` module in CPython."""
 argv: List[str]
-"""A mutable list of arguments the current program was started with."""
+"""Eine veränderbare Liste von Argumenten, mit denen das aktuelle Programm gestartet wurde."""
 byteorder: str
-"""The byte order of the system (``"little"`` or ``"big"``)."""
+"""Die Byte-Reihenfolge des Systems (``"little"`` oder ``"big"``)."""
 
 class _implementation:
     name: str
     version: Tuple[int, int, int]
 implementation: _implementation
-"""Object with information about the current Python implementation.
+"""Objekt mit Informationen über die aktuelle Python-Implementierung.
 
 For MicroPython, it has following attributes:
 
@@ -46,10 +46,7 @@ bare minimum is implemented in MicroPython.
 """
 maxsize: int
 """
-Maximum value which a native integer type can hold on the current platform,
-or maximum value representable by MicroPython integer type, if it's smaller
-than platform max value (that is the case for MicroPython ports without
-long int support).
+Maximaler Wert, den ein nativer Ganzzahl-Typ auf der aktuellen Plattform enthalten kann, oder maximaler Wert, den ein MicroPython-Ganzzahl-Typ darstellen kann, wenn er kleiner ist als der maximale Wert der Plattform ist (das ist der Fall bei MicroPython-Ports ohne long int Unterstützung).
 
 This attribute is useful for detecting "bitness" of a platform (32-bit vs
 64-bit, etc.). It's recommended to not compare this attribute to some
@@ -70,13 +67,13 @@ value directly, but instead count number of bits in it::
         # "> 32", "> 64" style of comparisons.
 """
 modules: Dict[str, Any]
-"""Dictionary of loaded modules. 
+"""Verzeichnis der geladenen Module. 
 
 On some ports, it may not include builtin modules."""
 path: List[str]
-"""A mutable list of directories to search for imported modules."""
+"""Eine veränderbare Liste von Verzeichnissen zum Suchen nach importierten Modulen."""
 platform: str
-"""The platform that MicroPython is running on. 
+"""Die Plattform, auf der MicroPython läuft. 
 
 For OS/RTOS ports, this is usually an identifier of the OS, e.g. ``"linux"``.
 For baremetal ports it is an identifier of a board, e.g. ``"pyboard"`` for 
@@ -87,9 +84,9 @@ If you need to check whether your program runs on MicroPython (vs other
 Python implementation), use ``sys.implementation`` instead.
 """
 version: str
-"""Python language version that this implementation conforms to, as a string."""
+"""Python-Sprachversion, der diese Implementierung als Zeichenkette entspricht."""
 version_info: Tuple[int, int, int]
-"""Python language version that this implementation conforms to, as a tuple of ints.
+"""Python-Sprachversion, mit der diese Implementierung konform ist, als Tupel von ints.
 
 Only the first three version numbers (major, minor, micro) are supported and
 they can be referenced only by index, not by name.

@@ -1,7 +1,7 @@
-"""Use the built-in compass."""
+"""Den eingebauten Kompass nutzen."""
 
 def calibrate() -> None:
-    """Starts the calibration process.
+    """Startet den Kalibrierungsprozess.
 
 Example: ``compass.calibrate()``
 
@@ -10,7 +10,7 @@ to rotate the device in order to draw a circle on the LED display."""
     ...
 
 def is_calibrated() -> bool:
-    """Check is the compass is calibrated.
+    """Überprüft, ob der Kompass kalibriert ist.
 
 Example: ``compass.is_calibrated()``
 
@@ -18,13 +18,13 @@ Example: ``compass.is_calibrated()``
     ...
 
 def clear_calibration() -> None:
-    """Undoes the calibration, making the compass uncalibrated again.
+    """Die Kalibrierung rückgängig machen, sodass der Kompass nicht mehr kalibriert ist.
 
 Example: ``compass.clear_calibration()``"""
     ...
 
 def get_x() -> int:
-    """Get the magnetic field strength on the ``x`` axis.
+    """Gibt die Stärke des magnetischen Feldes auf der ``x`` Achse zurück.
 
 Example: ``compass.get_x()``
 
@@ -34,7 +34,7 @@ Call ``calibrate`` first or the results will be inaccurate.
     ...
 
 def get_y() -> int:
-    """Get the magnetic field strength on the ``y`` axis.
+    """Gibt die Stärke des magnetischen Feldes auf der ``y`` Achse zurück.
 
 Example: ``compass.get_y()``
 
@@ -44,7 +44,7 @@ Call ``calibrate`` first or the results will be inaccurate.
     ...
 
 def get_z() -> int:
-    """Get the magnetic field strength on the ``z`` axis.
+    """Gibt die Stärke des magnetischen Feldes auf der ``z`` Achse zurück.
 
 Example: ``compass.get_z()``
 
@@ -54,7 +54,7 @@ Call ``calibrate`` first or the results will be inaccurate.
     ...
 
 def heading() -> int:
-    """Get the compass heading.
+    """Gibt die Kompassrichtung zurück.
 
 Example: ``compass.heading()``
 
@@ -62,7 +62,7 @@ Example: ``compass.heading()``
     ...
 
 def get_field_strength() -> int:
-    """Get the magnitude of the magnetic field around the device.
+    """Gibt die Größe des Magnetfelds um den Calliope mini zurück.
 
 Example: ``compass.get_field_strength()``
 

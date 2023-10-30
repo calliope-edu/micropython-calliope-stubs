@@ -10,7 +10,7 @@ Example: ``accelerometer.get_x()``
     ...
 
 def get_y() -> int:
-    """Ermittelt die Beschleunigungsmessung in der ``y``-Achse in Milligramm.
+    """Ermittelt die Beschleunigungsmessung in der ``y``-Achse in milli-g.
 
 Example: ``accelerometer.get_y()``
 
@@ -18,7 +18,7 @@ Example: ``accelerometer.get_y()``
     ...
 
 def get_z() -> int:
-    """Ermittelt die Beschleunigungsmessung in der ``z``-Achse in Milligramm.
+    """Ermittelt die Beschleunigungsmessung in der ``z``-Achse in milli-g.
 
 Example: ``accelerometer.get_z()``
 
@@ -26,7 +26,7 @@ Example: ``accelerometer.get_z()``
     ...
 
 def get_values() -> Tuple[int, int, int]:
-    """Abrufen der Beschleunigungsmessungen in allen Achsen auf einmal als Tupel (eine geordnete Sammlung von Werten).
+    """Abrufen der Beschleunigungsmessungen in allen Achsen auf einmal als Tupel (einer geordnete Sammlung von Werten).
 
 Example: ``x, y, z = accelerometer.get_values()``
 

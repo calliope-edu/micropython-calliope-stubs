@@ -12,7 +12,7 @@ from . import spi as spi
 from . import uart as uart
 
 def run_every(callback: Optional[Callable[[], None]]=None, days: int=0, h: int=0, min: int=0, s: int=0, ms: int=0) -> Callable[[Callable[[], None]], Callable[[], None]]:
-    """Eine geplante Funktion, die in dem von den Zeitargumenten angegebenen Intervall ausgeführt wird. **V3** (alle)
+    """Zeitplan für die Ausführung einer Funktion in dem durch die Zeitargumente festgelegten Intervall **nur V3**. (run_every)
 
 Example: ``run_every(my_logging, min=5)``
 
@@ -90,8 +90,8 @@ If they are both integers (i.e ``10``), it will return an integer::
     returns_int = scale(accelerometer.get_x(), from_=(-2000, 2000), to=(0, 255))
 
 :param value: Eine zu konvertierende Zahl.
-:param from_: Ein Tupel, um den Bereich festzulegen, aus dem konvertiert werden soll.
-:param to: Ein Tupel, um den Bereich festzulegen, zu dem konvertiert werden soll.
+:param from_: Ein Tupel (das ist eine geordnete Sammlung von Werten), um den Bereich festzulegen, aus dem konvertiert werden soll.
+:param to: Ein Tupel (eine geordnete Sammlung von Werten), um den Bereich festzulegen, zu dem konvertiert werden soll.
 :return: The ``value`` converted to the ``to`` range."""
 
 def sleep(n: float) -> None:
@@ -128,7 +128,7 @@ Out of range values will be clamped to 0 or 255.
     ...
 
 class Button:
-    """Die Klasse für die Tasten ``button_a`` und ``button_b``. (Tasten)"""
+    """Die Klasse für die Tasten ``button_a`` und ``button_b``."""
 
     def is_pressed(self) -> bool:
         """Überprüft, ob die Taste gedrückt wird.
@@ -157,7 +157,7 @@ button_b: Button
 """Das ``Button`` Objekt der rechten Taste."""
 
 class MicroBitDigitalPin:
-    """Ein digitaler Pin. (calliopeminidigitalpin)
+    """Ein digitaler Pin. (digitalpin)
 
 Some pins support analog and touch features using the ``MicroBitAnalogDigitalPin`` and ``MicroBitTouchPin`` subclasses."""
     NO_PULL: int
@@ -212,11 +212,11 @@ changes.
         ...
 
     def write_analog(self, value: int) -> None:
-        """Gib ein PWM-Signal am Pin aus, bei dem das Verhältnis von An- zu Auszeit proportional zu ``Wert`` ist.
+        """Gibt ein PWM-Signal an den Pin aus, dessen Einschaltdauer proportional zu ``value`` ist.
 
 Example: ``pin0.write_analog(254)``
 
-:param value: Eine ganze Zahl oder eine Gleitkommazahl zwischen 0 (0 % Einsatzzeit) und 1023 (100 % Einsatzzeit)."""
+:param value: (Gib ein PWM-Signal am Pin aus, bei dem das Verhältnis von An- zu Auszeit proportional zu {{Wert}} ist.) Eine Ganzzahl oder eine Fließkommazahl zwischen 0 (0% Einschaltdauer) und 1023 (100% Einschaltdauer)."""
 
     def set_analog_period(self, period: int) -> None:
         """Setzt den Zeitraum des PWM-Signals, das ausgegeben wird, auf ``period`` in Millisekunden.
@@ -226,14 +226,14 @@ Example: ``pin0.set_analog_period(10)``
 :param period: Der Zeitraum in Millisekunden mit einem Mindestwert von 1ms."""
 
     def set_analog_period_microseconds(self, period: int) -> None:
-        """Setzt den Zeitraum des PWM-Signals, das ausgegeben wird, auf ``period`` in Millisekunden.
+        """Setzt den Zeitraum des PWM-Signals, das ausgegeben wird, auf ``period`` in Mikrosekunden.
 
 Example: ``pin0.set_analog_period_microseconds(512)``
 
-:param period: Der Zeitraum in Millisekunden mit einem Mindestwert von 1ms."""
+:param period: Die Periode in Mikrosekunden mit einem Mindestwert von 256μs."""
 
 class MicroBitAnalogDigitalPin(MicroBitDigitalPin):
-    """Ein Pin mit analogen und digitalen Eigenschaften. (calliopeanalogdigitalpin)"""
+    """Pin mit analogen und digitalen Eigenschaften. (analogdigitalpin)"""
 
     def read_analog(self) -> int:
         """Gibt die Spannung aus, die an dem Pin anliegt.
@@ -243,7 +243,7 @@ Example: ``pin0.read_analog()``
 :return: An integer between 0 (meaning 0V) and 1023 (meaning 3.3V)."""
 
 class MicroBitTouchPin(MicroBitAnalogDigitalPin):
-    """Ein Pin mit Analog-, Digital- und Touch-Funktionen. (calliopeminitouchpin)"""
+    """Pin mit analogen-, digitalen- und Touch-Funktionen. (touchpin)"""
     CAPACITIVE: int
     RESISTIVE: int
 
@@ -287,7 +287,7 @@ pin1: MicroBitTouchPin
 pin2: MicroBitTouchPin
 """Pin mit digitalen, analogen und Touch-Funktionen."""
 pin3: MicroBitTouchPin
-"""Pin mit digitalen, analogen und Touch-Funktionen."""
+"""Pin mit digitalen-, analogen- und Touch-Funktionen."""
 pin4: MicroBitAnalogDigitalPin
 """Pin mit digitalen und analogen Funktionen."""
 pin5: MicroBitDigitalPin
@@ -313,9 +313,9 @@ pin14: MicroBitDigitalPin
 pin15: MicroBitDigitalPin
 """Pin mit digitalen Funktionen."""
 pin16: MicroBitAnalogDigitalPin
-"""Pin mit digitalen Funktionen."""
+"""Pin mit digitalen und analogen Funktionen."""
 pin17: MicroBitDigitalPin
-"""Pin with digital features."""
+"""Pin mit digitalen Funktionen."""
 pin19: MicroBitDigitalPin
 """Pin mit digitalen Funktionen."""
 pin20: MicroBitDigitalPin
@@ -328,23 +328,23 @@ pin_speaker: MicroBitAnalogDigitalPin
 This API is intended only for use in Pulse-Width Modulation pin operations e.g. pin_speaker.write_analog(128).
 """
 pin_M0_SPEED: MicroBitDigitalPin
-"""Pin with digital features."""
+"""Pin mit digitalen Funktionen."""
 pin_M0_DIR: MicroBitDigitalPin
-"""Pin with digital features."""
+"""Pin mit digitalen Funktionen."""
 pin_M1_SPEED: MicroBitDigitalPin
-"""Pin with digital features."""
+"""Pin mit digitalen Funktionen."""
 pin_M1_DIR: MicroBitDigitalPin
-"""Pin with digital features."""
+"""Pin mit digitalen Funktionen."""
 pin_A0_SDA: MicroBitDigitalPin
-"""Pin with digital features."""
+"""Pin mit digitalen Funktionen."""
 pin_A0_SCL: MicroBitDigitalPin
-"""Pin with digital features."""
+"""Pin mit digitalen Funktionen."""
 pin_A1_RX: MicroBitDigitalPin
-"""Pin with digital features."""
+"""Pin mit digitalen Funktionen."""
 pin_A1_TX: MicroBitDigitalPin
-"""Pin with digital features."""
+"""Pin mit digitalen Funktionen."""
 pin_M_MODE: MicroBitDigitalPin
-"""Pin with digital features."""
+"""Pin mit digitalen Funktionen."""
 
 class Image:
     """Ein Bild, das auf der Calliope mini LED-Matrix angezeigt wird.
@@ -365,7 +365,7 @@ Given an image object it's possible to display it via the ``display`` API::
     CONFUSED: Image
     """Verwirrt-Symbol."""
     ANGRY: Image
-    """Sauer-Smiley-Symbol."""
+    """Saurer-Smiley-Symbol."""
     ASLEEP: Image
     """Schlafender-Smiley-Symbol."""
     SURPRISED: Image
@@ -443,13 +443,13 @@ Given an image object it's possible to display it via the ``display`` API::
     MUSIC_QUAVER: Image
     """Achtelnote-Symbol."""
     MUSIC_QUAVERS: Image
-    """Pärchen-Achtelnoten-Symbol."""
+    """Achtelnoten-Paar-Symbol."""
     PITCHFORK: Image
     """Heugabel-Symbol."""
     XMAS: Image
     """Weihnachtsbaum-Symbol."""
     PACMAN: Image
-    """Pac-Man Figur Symbol. (pac-man)"""
+    """Pac-Man Symbol. (pac-man)"""
     TARGET: Image
     """Ziel-Symbol."""
     TSHIRT: Image
@@ -463,7 +463,7 @@ Given an image object it's possible to display it via the ``display`` API::
     TORTOISE: Image
     """Schildkröten-Symbol."""
     BUTTERFLY: Image
-    """Schmetterling Symbol."""
+    """Schmetterlings-Symbol."""
     STICKFIGURE: Image
     """Strichmännchen-Symbol."""
     GHOST: Image
@@ -481,7 +481,7 @@ Given an image object it's possible to display it via the ``display`` API::
     SCISSORS: Image
     """Scheren-Symbol."""
     ALL_CLOCKS: List[Image]
-    """Eine Liste mit allen Zeit Symbolen in einer Reihenfolge."""
+    """Eine Liste mit allen Zeit-Symbolen in einer Reihenfolge."""
     ALL_ARROWS: List[Image]
     """Eine Liste mit allen Pfeil-Symbolen in Reihenfolge."""
 
@@ -658,7 +658,7 @@ For example, img.crop(x, y, w, h) can be implemented as::
         ...
 
     def __repr__(self) -> str:
-        """Get a compact string representation of the image."""
+        """Liefert eine kompakte Zeichenkette zur Darstellung des Bildes."""
         ...
 
     def __str__(self) -> str:
@@ -682,8 +682,7 @@ Example: ``Image.HEART - Image.HEART_SMALL``
         ...
 
     def __mul__(self, n: float) -> Image:
-        """Create a new image by multiplying the brightness of each pixel by
-``n``.
+        """Erstellen eines neuen Bildes, indem die Helligkeit jedes Pixels durch ``n`` geteilt wird.
 
 Example: ``Image.HEART * 0.5``
 
@@ -691,8 +690,7 @@ Example: ``Image.HEART * 0.5``
         ...
 
     def __truediv__(self, n: float) -> Image:
-        """Create a new image by dividing the brightness of each pixel by
-``n``.
+        """Erstellen eines neuen Bildes, indem die Helligkeit jedes Pixels durch ``n`` geteilt wird.
 
 Example: ``Image.HEART / 2``
 
@@ -706,7 +704,7 @@ class SoundEvent:
     """Stellt den Übergang von Tonereignissen dar, von ``loud`` zu ``quiet`` wie Sprechen oder Hintergrundmusik."""
 
 class Sound:
-    """Die eingebauten Töne können mit ``audio.play(Sound.NAME)`` aufgerufen werden."""
+    """Die integrierten Töne können mit ``audio.play(Sound.NAME)`` aufgerufen werden."""
     GIGGLE: Sound
     """Giggle-Ton."""
     HAPPY: Sound

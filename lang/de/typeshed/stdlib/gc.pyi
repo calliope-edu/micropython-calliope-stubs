@@ -1,22 +1,22 @@
-"""Control the garbage collector"""
+"""Den Garbage Collector (Speicherbereinigung) steuern"""
 from typing import overload
 
 def enable() -> None:
-    """Enable automatic garbage collection."""
+    """Die automatische Garbage Collection aktivieren."""
     ...
 
 def disable() -> None:
-    """Disable automatic garbage collection.
+    """Die automatische Garbage Collection deaktivieren.
 
 Heap memory can still be allocated,
 and garbage collection can still be initiated manually using ``gc.collect``."""
 
 def collect() -> None:
-    """Run a garbage collection."""
+    """Eine Garbage Collection (Speicherbereinigung) durchführen."""
     ...
 
 def mem_alloc() -> int:
-    """Get the number of bytes of heap RAM that are allocated.
+    """Gibt die Anzahl der zugewiesenen Bytes an Heap-RAM zurück.
 
 :return: The number of bytes allocated.
 
@@ -24,7 +24,7 @@ This function is MicroPython extension."""
     ...
 
 def mem_free() -> int:
-    """Get the number of bytes of available heap RAM, or -1 if this amount is not known.
+    """Gibt die Anzahl der Bytes des verfügbaren Heap-RAM, oder -1, wenn dieser Betrag nicht bekannt ist.
 
 :return: The number of bytes free.
 
@@ -33,7 +33,7 @@ This function is MicroPython extension."""
 
 @overload
 def threshold() -> int:
-    """Query the additional GC allocation threshold.
+    """Abfrage der zusätzlichen GC-Zuweisungsschwelle.
 
 :return: The GC allocation threshold.
 
@@ -44,7 +44,7 @@ implementations, its signature and semantics are different."""
 
 @overload
 def threshold(amount: int) -> None:
-    """Set the additional GC allocation threshold.
+    """Legt den Schwellenwert für die zusätzliche GC-Zuweisung fest.
 
 Normally, a collection is triggered only when a new allocation
 cannot be satisfied, i.e. on an  out-of-memory (OOM) condition.
@@ -64,5 +64,5 @@ This function is a MicroPython extension. CPython has a similar
 function - ``set_threshold()``, but due to different GC
 implementations, its signature and semantics are different.
 
-:param amount: The number of bytes after which a garbage collection should be triggered."""
+:param amount: Die Anzahl der Bytes, nach der eine Garbage Collection ausgelöst werden soll."""
     ...

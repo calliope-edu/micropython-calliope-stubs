@@ -1,18 +1,18 @@
-"""Log data to your micro:bit V2."""
+"""Daten auf den Calliope mini V3 loggen."""
 from typing import Literal, Mapping, Optional, Union, overload
 MILLISECONDS = 1
-"""Milliseconds timestamp format."""
+"""Format des Zeitstempels in Millisekunden. (millisconds)"""
 SECONDS = 10
-"""Seconds timestamp format."""
+"""Format des Zeitstempels in Sekunden."""
 MINUTES = 600
-"""Minutes timestamp format."""
+"""Format des Zeitstempels in Minuten."""
 HOURS = 36000
-"""Hours timestamp format."""
+"""Format des Zeitstempels in Stunden."""
 DAYS = 864000
-"""Days timestamp format."""
+"""Format des Zeitstempels in Tagen."""
 
 def set_labels(*labels: str, timestamp: Optional[Literal[1, 10, 36000, 864000]]=SECONDS) -> None:
-    """Set up the log file header.
+    """Den Header der Protokolldatei einrichten.
 
 Example: ``log.set_labels('X', 'Y', 'Z', timestamp=log.MINUTES)``
 
@@ -27,13 +27,13 @@ present, it will generate a new header row with the additional columns.
 By default the first column contains a timestamp for each row. The time
 unit can be selected via the timestamp argument.
 
-:param *labels: Any number of positional arguments, each corresponding to an entry in the log header.
-:param timestamp: Select the timestamp unit that will be automatically added as the first column in every row. Timestamp values can be one of ``log.MILLISECONDS``, ``log.SECONDS``, ``log.MINUTES``, ``log.HOURS``, ``log.DAYS`` or ``None`` to disable the timestamp. The default value is ``log.SECONDS``."""
+:param *labels: Eine beliebige Anzahl von Positionsargumenten, die jeweils einem Eintrag im Log-Header entsprechen.
+:param timestamp: Die Maßeinheit für den Zeitstempel, der automatisch als erste Spalte in jeder Zeile eingefügt wird. Zeitstempelwerte können einer der folgenden sein: ``log.MILLISECONDS``, ``log.SECONDS``, ``log.MINUTES``, ``log.HOURS``, ``log.DAYS`` oder ``None``, um den Zeitstempel zu deaktivieren. Der Standardwert ist ``log.SECONDS``."""
     ...
 
 @overload
 def add(data_dictionary: Optional[Mapping[str, Union[str, int, float]]]) -> None:
-    """Add a data row to the log by passing a dictionary of headers and values.
+    """Fügt dem Protokoll eine Datenzeile hinzu, indem ein Wörterbuch mit Kopfzeilen und Werten übergeben wird.
 
 Example: ``log.add({ 'temp': temperature() })``
 
@@ -46,12 +46,12 @@ to the log with the extra labels.
 Labels previously specified and not present in a call to this function will
 be skipped with an empty value in the log row.
 
-:param data_dictionary: The data to log as a dictionary with a key for each header."""
+:param data_dictionary: Die zu protokollierenden Daten in Form eines Wörterbuchs mit einem Key für jede Kopfzeile."""
     ...
 
 @overload
 def add(**kwargs: Union[str, int, float]) -> None:
-    """Add a data row to the log using keyword arguments.
+    """Hinzufügen einer Datenzeile zum Protokoll unter Verwendung von Schlüsselwortargumenten.
 
 Example: ``log.add(temp=temperature())``
 
@@ -66,7 +66,7 @@ be skipped with an empty value in the log row."""
     ...
 
 def delete(full=False):
-    """Deletes the contents of the log, including headers.
+    """Löscht den Inhalt des Protokolls, einschließlich der Headers.
 
 Example: ``log.delete()``
 
@@ -75,15 +75,15 @@ To add the log headers again the ``set_labels`` function should to be called aft
 There are two erase modes; “full” completely removes the data from the physical storage,
 and “fast” invalidates the data without removing it.
 
-:param full: ``True`` selects a “full” erase and ``False`` selects the “fast” erase method."""
+:param full: ``True`` wählt eine "vollständige" Löschung und ``False`` wählt die "schnelle" Löschmethode."""
     ...
 
 def set_mirroring(serial: bool):
-    """Configure mirroring of the data logging activity to the serial output.
+    """Konfiguriert die Spiegelung der Datenaufzeichnungsaktivität auf die serielle Ausgabe.
 
 Example: ``log.set_mirroring(True)``
 
 Serial mirroring is disabled by default. When enabled, it will print to serial each row logged into the log file.
 
-:param serial: ``True`` enables mirroring data to the serial output."""
+:param serial: ``True`` ermöglicht das Spiegeln von Daten an die serielle Ausgabe."""
     ...

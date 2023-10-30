@@ -372,6 +372,9 @@ def replace_english(
 
 
 def get_string_by_key(key: str, dict: TranslationJSON):
+    if not key in dict:
+        raise AssertionError(f"Key {key} not found in dict {dict}")
+
     result = dict[key]["message"]
     return result.strip() if result else result
 

@@ -1,23 +1,23 @@
-"""Communicate with a device using a serial interface."""
+"""Kommunikation mit einem Gerät über eine serielle Schnittstelle."""
 from _typeshed import WriteableBuffer
 from ..calliope import MicroBitDigitalPin
 from typing import Optional, Union
 ODD: int
-"""Odd parity"""
+"""Ungerade Parität"""
 EVEN: int
-"""Even parity"""
+"""Gleiche Parität"""
 
 def init(baudrate: int=9600, bits: int=8, parity: Optional[int]=None, stop: int=1, tx: Optional[MicroBitDigitalPin]=None, rx: Optional[MicroBitDigitalPin]=None) -> None:
-    """Initialize serial communication.
+    """Serielle Kommunikation initialisieren.
 
 Example: ``uart.init(115200, tx=pin0, rx=pin1)``
 
-:param baudrate: The speed of communication.
-:param bits: The size of bytes being transmitted. micro:bit only supports 8.
-:param parity: How parity is checked, ``None``, ``uart.ODD`` or ``uart.EVEN``.
-:param stop: The number of stop bits, has to be 1 for micro:bit.
-:param tx: Transmitting pin.
-:param rx: Receiving pin.
+:param baudrate: Die Geschwindigkeit der Kommunikation.
+:param bits: Die Größe der Bytes, die übertragen wird. Calliope mini unterstützt nur 8.
+:param parity: Wie Parität überprüft wird, ``None``, ``uart.ODD`` oder ``uart.EVEN``.
+:param stop: Die Anzahl der Stopp-Bits, muss für den Calliope mini 1 sein.
+:param tx: Sendender Pin.
+:param rx: Empfangender Pin.
 
 Initializing the UART on external pins will cause the Python console on
 USB to become unaccessible, as it uses the same hardware. To bring the
@@ -29,7 +29,7 @@ For more details see `the online documentation <https://microbit-micropython.rea
     ...
 
 def any() -> bool:
-    """Check if any data is waiting.
+    """Prüfen, ob Daten warten.
 
 Example: ``uart.any()``
 
@@ -37,26 +37,26 @@ Example: ``uart.any()``
     ...
 
 def read(nbytes: Optional[int]=None) -> Optional[bytes]:
-    """Read bytes.
+    """Bytes lesen.
 
 Example: ``uart.read()``
 
-:param nbytes: If ``nbytes`` is specified then read at most that many bytes, otherwise read as many bytes as possible
+:param nbytes: Wenn ``nbytes`` angegeben ist, werden maximal so viele Bytes gelesen, andernfalls werden so viele Bytes wie möglich gelesen
 :return: A bytes object or ``None`` on timeout"""
     ...
 
 def readinto(buf: WriteableBuffer, nbytes: Optional[int]=None) -> Optional[int]:
-    """Read bytes into the ``buf``.
+    """Bytes in den ``buf`` lesen.
 
 Example: ``uart.readinto(input_buffer)``
 
-:param buf: The buffer to write to.
-:param nbytes: If ``nbytes`` is specified then read at most that many bytes, otherwise read ``len(buf)`` bytes.
+:param buf: Der Puffer, in den geschrieben wird.
+:param nbytes: Wenn ``nbytes`` angegeben ist, werden höchstens so viele Bytes gelesen, andernfalls ``len(buf)`` Bytes.
 :return: number of bytes read and stored into ``buf`` or ``None`` on timeout."""
     ...
 
 def readline() -> Optional[bytes]:
-    """Read a line, ending in a newline character.
+    """Liest eine Zeile, die mit einem Zeilenumbruch endet.
 
 Example: ``uart.readline()``
 
@@ -64,11 +64,11 @@ Example: ``uart.readline()``
     ...
 
 def write(buf: Union[bytes, str]) -> Optional[int]:
-    """Write a buffer to the bus.
+    """Schreibt einen Puffer auf den Bus.
 
 Example: ``uart.write('hello world')``
 
-:param buf: A bytes object or a string.
+:param buf: Ein Byte-Objekt oder eine Zeichenkette (String).
 :return: The number of bytes written, or ``None`` on timeout.
 
 Examples::

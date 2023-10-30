@@ -1,13 +1,13 @@
-"""Make the micro:bit talk, sing and make other speech like sounds."""
+"""Der Calliope mini kann sprechen, singen und andere sprachähnliche Geräusche machen."""
 from typing import Optional
 from .calliope import MicroBitDigitalPin, pin0
 
 def translate(words: str) -> str:
-    """Translate English words to phonemes.
+    """Englische Wörter in Laute übersetzen.
 
 Example: ``speech.translate('hello world')``
 
-:param words: A string of English words.
+:param words: Eine Zeichenkette aus englischen Wörtern.
 :return: A string containing a best guess at the appropriate phonemes to pronounce.
 The output is generated from this `text to phoneme translation table <https://github.com/s-macke/SAM/wiki/Text-to-phoneme-translation-table>`_.
 
@@ -19,17 +19,16 @@ See `the online documentation <https://microbit-micropython.readthedocs.io/en/v2
     ...
 
 def pronounce(phonemes: str, pitch: int=64, speed: int=72, mouth: int=128, throat: int=128, pin: Optional[MicroBitDigitalPin]=pin0) -> None:
-    """Pronounce phonemes.
+    """Laute aussprechen.
 
 Example: ``speech.pronounce(' /HEHLOW WERLD')``
 
-:param phonemes: The string of phonemes to pronounce
-:param pitch: A number representing the pitch of the voice
-:param speed: A number representing the speed of the voice
-:param mouth: A number representing the mouth of the voice
-:param throat: A number representing the throat of the voice
-:param pin: Optional argument to specify the output pin can be used to override the default of ``pin0``.
-If we do not want any sound to play out of the pins can use ``pin=None``. micro:bit V2 only.
+:param phonemes: Die Zeichenkette der auszusprechenden Laute
+:param pitch: Eine Zahl, die die Tonhöhe der Stimme repräsentiert
+:param speed: Eine Zahl, die die Geschwindigkeit der Stimme angibt
+:param mouth: Eine Zahl, welche die Mundart der Stimme repräsentiert
+:param throat: Eine Zahl, welche die Stimmführung der Stimme repräsentiert
+:param pin: Ein optionales Argument zur Angabe des Ausgabepins kann verwendet werden, um den Standard von ``pin0`` zu überschreiben. Wenn kein Ton gespielt werden, kann ``pin=None`` verwendet werden.
 
 Override the optional pitch, speed, mouth and throat settings to change the
 timbre (quality) of the voice.
@@ -38,17 +37,16 @@ See `the online documentation <https://microbit-micropython.readthedocs.io/en/v2
     ...
 
 def say(words: str, pitch: int=64, speed: int=72, mouth: int=128, throat: int=128, pin: MicroBitDigitalPin=pin0) -> None:
-    """Say English words.
+    """Englische Wörter sagen.
 
 Example: ``speech.say('hello world')``
 
-:param words: The string of words to say.
-:param pitch: A number representing the pitch of the voice
-:param speed: A number representing the speed of the voice
-:param mouth: A number representing the mouth of the voice
-:param throat: A number representing the throat of the voice
-:param pin: Optional argument to specify the output pin can be used to override the default of ``pin0``.
-If we do not want any sound to play out of the pins can use ``pin=None``. micro:bit V2 only.
+:param words: Die Zeichenkette von Wörtern, die zu sagen sind.
+:param pitch: Eine Zahl, die die Tonhöhe der Stimme repräsentiert
+:param speed: Eine Zahl, die die Geschwindigkeit der Stimme angibt
+:param mouth: Eine Zahl, welche die Mundart der Stimme repräsentiert
+:param throat: Eine Zahl, welche die Stimmführung der Stimme repräsentiert
+:param pin: Ein optionales Argument zur Angabe des Ausgabepins kann verwendet werden, um den Standard von ``pin0`` zu überschreiben. Wenn kein Ton gespielt werden, kann ``pin=None`` verwendet werden.
 
 The result is semi-accurate for English. Override the optional pitch, speed,
 mouth and throat settings to change the timbre (quality) of the voice.
@@ -60,17 +58,16 @@ See `the online documentation <https://microbit-micropython.readthedocs.io/en/v2
     ...
 
 def sing(phonemes: str, pitch: int=64, speed: int=72, mouth: int=128, throat: int=128, pin: MicroBitDigitalPin=pin0) -> None:
-    """Sing phonemes.
+    """Laute singen.
 
 Example: ``speech.sing(' /HEHLOW WERLD')``
 
-:param phonemes: The string of words to sing.
-:param pitch: A number representing the pitch of the voice
-:param speed: A number representing the speed of the voice
-:param mouth: A number representing the mouth of the voice
-:param throat: A number representing the throat of the voice
-:param pin: Optional argument to specify the output pin can be used to override the default of ``pin0``.
-If we do not want any sound to play out of the pins can use ``pin=None``. micro:bit V2 only.
+:param phonemes: Die Zeichenkette der zu singenden Wörter.
+:param pitch: Eine Zahl, die die Tonhöhe der Stimme repräsentiert
+:param speed: Eine Zahl, die die Geschwindigkeit der Stimme angibt
+:param mouth: Eine Zahl, welche die Mundart der Stimme repräsentiert
+:param throat: Eine Zahl, welche die Stimmführung der Stimme repräsentiert
+:param pin: Ein optionales Argument zur Angabe des Ausgabepins kann verwendet werden, um den Standard von ``pin0`` zu überschreiben. Wenn kein Ton gespielt werden, kann ``pin=None`` verwendet werden.
 
 Override the optional pitch, speed, mouth and throat settings to change
 the timbre (quality) of the voice.
