@@ -1,7 +1,7 @@
 """Manage the power modes of the Calliope mini (V3 only).
 """
 
-from calliope import MicroBitDigitalPin, Button
+from calliopemini import MicroBitDigitalPin, Button
 from typing import Optional, Tuple, Union
 
 def off() -> None:

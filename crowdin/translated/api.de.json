@@ -551,6 +551,14 @@
     "message": "Pin mit digitalen Funktionen.",
     "description": "Pin with digital features."
   },
+  "calliopemini.pin18": {
+    "message": "pin18",
+    "description": "(field name) Pin with digital features."
+  },
+  "calliopemini.pin18.summary": {
+    "message": "Pin mit digitalen Funktionen.",
+    "description": "Pin with digital features."
+  },
   "calliopemini.pin19": {
     "message": "pin19",
     "description": "(field name) Pin with digital features."
@@ -566,6 +574,14 @@
   "calliopemini.pin20.summary": {
     "message": "Pin mit digitalen Funktionen.",
     "description": "Pin with digital features."
+  },
+  "calliopemini.pin_RGB": {
+    "message": "pin RGB",
+    "description": "(field name) A RGB pin on the front of the Calliope mini."
+  },
+  "calliopemini.pin_RGB.summary": {
+    "message": "Ein RGB-Pin auf der Vorderseite des Calliope mini.",
+    "description": "A pin on the front of the Calliope mini."
   },
   "calliopemini.pin_logo": {
     "message": "pin logo",

@@ -362,6 +362,9 @@ pin16: MicroBitAnalogDigitalPin
 pin17: MicroBitDigitalPin
 """Pin with digital features."""
 
+pin18: MicroBitAnalogDigitalPin
+"""Pin with digital and analog features."""
+
 pin19: MicroBitDigitalPin
 """Pin with digital features."""
 
@@ -370,6 +373,9 @@ pin20: MicroBitDigitalPin
 
 pin_logo: MicroBitTouchPin
 """A touch sensitive logo pin on the back of the Calliope mini, which by default is set to capacitive touch mode."""
+
+pin_RGB: MicroBitDigitalPin
+"""Pin with digital features."""
 
 pin_speaker: MicroBitAnalogDigitalPin
 """A pin to address the Calliope mini speaker.
