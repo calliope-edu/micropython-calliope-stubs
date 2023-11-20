@@ -8,7 +8,7 @@
     "description": "Pins, images, sounds, temperature and volume."
   },
   "calliopemini.run_every": {
-    "message": "run_every",
+    "message": "alle",
     "description": "(function name) Schedule to run a function at the interval specified by the time arguments **V3 only**."
   },
   "calliopemini.run_every.summary": {
@@ -140,7 +140,7 @@
     "description": "(parameter name) A tuple to define the range to convert to."
   },
   "calliopemini.scale-2.param-doc.to": {
-    "message": "Ein Tupel (eine geordnete Sammlung von Werten), um den Bereich festzulegen, zu dem konvertiert werden soll.",
+    "message": "Ein Tupel  (eine geordnete Sammlung von Werten), um den Bereich festzulegen, zu dem konvertiert werden soll.",
     "description": "Parameter docs"
   },
   "calliopemini.scale-2.param-name.value": {
@@ -248,7 +248,7 @@
     "description": "The right button ``Button`` object."
   },
   "calliopemini.MicroBitDigitalPin": {
-    "message": "digitalpin",
+    "message": "microbitdigitalpin",
     "description": "(class name) A digital pin."
   },
   "calliopemini.MicroBitDigitalPin.summary": {
@@ -276,7 +276,7 @@
     "description": "(parameter name) 1 to set the pin high or 0 to set the pin low"
   },
   "calliopemini.MicroBitDigitalPin.write_digital.param-doc.value": {
-    "message": "1, um den Pin auf high zu setzen, oder 0, um den Pin auf low zu setzen",
+    "message": "1, um den Pin auf high zu setzen – oder 0, um den Pin auf low zu setzen",
     "description": "Parameter docs"
   },
   "calliopemini.MicroBitDigitalPin.set_pull": {
@@ -316,11 +316,11 @@
     "description": "(function name) Output a PWM signal on the pin, with the duty cycle proportional to ``value``."
   },
   "calliopemini.MicroBitDigitalPin.write_analog.summary": {
-    "message": "Gibt ein PWM-Signal an den Pin aus, dessen Einschaltdauer proportional zu {{value}} ist.",
+    "message": "Gib ein PWM-Signal am Pin aus, bei dem das Verhältnis von An- zu Auszeit proportional zu {{Wert}} ist.",
     "description": "Output a PWM signal on the pin, with the duty cycle proportional to ``value``."
   },
   "calliopemini.MicroBitDigitalPin.write_analog.param-name.value": {
-    "message": "Gib ein PWM-Signal am Pin aus, bei dem das Verhältnis von An- zu Auszeit proportional zu {{Wert}} ist.",
+    "message": "value",
     "description": "(parameter name) An integer or a floating point number between 0 (0% duty cycle) and 1023 (100% duty)."
   },
   "calliopemini.MicroBitDigitalPin.write_analog.param-doc.value": {
@@ -360,11 +360,11 @@
     "description": "Parameter docs"
   },
   "calliopemini.MicroBitAnalogDigitalPin": {
-    "message": "analogdigitalpin",
+    "message": "microbitanalogdigitalpin",
     "description": "(class name) A pin with analog and digital features."
   },
   "calliopemini.MicroBitAnalogDigitalPin.summary": {
-    "message": "Pin mit analogen und digitalen Eigenschaften.",
+    "message": "Ein Pin mit analogen und digitalen Eigenschaften.",
     "description": "A pin with analog and digital features."
   },
   "calliopemini.MicroBitAnalogDigitalPin.read_analog": {
@@ -376,11 +376,11 @@
     "description": "Read the voltage applied to the pin."
   },
   "calliopemini.MicroBitTouchPin": {
-    "message": "touchpin",
+    "message": "microbittouchpin",
     "description": "(class name) A pin with analog, digital and touch features."
   },
   "calliopemini.MicroBitTouchPin.summary": {
-    "message": "Pin mit analogen-, digitalen- und Touch-Funktionen.",
+    "message": "Ein Pin mit Analog-, Digital- und Touch-Funktionen.",
     "description": "A pin with analog, digital and touch features."
   },
   "calliopemini.MicroBitTouchPin.is_touched": {
@@ -404,7 +404,7 @@
     "description": "(parameter name) ``CAPACITIVE`` or ``RESISTIVE`` from the relevant pin."
   },
   "calliopemini.MicroBitTouchPin.set_touch_mode.param-doc.value": {
-    "message": "{{CAPACITIVE}} oder {{RESISTIVE}} von dem entsprechenden Pin.",
+    "message": "{{CAPACITIVE}} oder {{RESISTIVE}} Touch-Modus des entsprechenden Pins.",
     "description": "Parameter docs"
   },
   "calliopemini.pin0": {
@@ -433,11 +433,11 @@
   },
   "calliopemini.pin3": {
     "message": "pin3",
-    "description": "(field name) Pin with digital, analog and touch features."
+    "description": "(field name) Pin with digital and touch features."
   },
   "calliopemini.pin3.summary": {
-    "message": "Pin mit digitalen-, analogen- und Touch-Funktionen.",
-    "description": "Pin with digital, analog and touch features."
+    "message": "Pin mit digitalen und Touch-Funktionen.",
+    "description": "Pin with digital and touch features."
   },
   "calliopemini.pin4": {
     "message": "pin4",
@@ -553,11 +553,11 @@
   },
   "calliopemini.pin18": {
     "message": "pin18",
-    "description": "(field name) Pin with digital features."
+    "description": "(field name) Pin with digital and analog features."
   },
   "calliopemini.pin18.summary": {
-    "message": "Pin mit digitalen Funktionen.",
-    "description": "Pin with digital features."
+    "message": "Pin mit digitalen und analogen Funktionen.",
+    "description": "Pin with digital and analog features."
   },
   "calliopemini.pin19": {
     "message": "pin19",
@@ -575,21 +575,21 @@
     "message": "Pin mit digitalen Funktionen.",
     "description": "Pin with digital features."
   },
-  "calliopemini.pin_RGB": {
-    "message": "pin RGB",
-    "description": "(field name) A RGB pin on the front of the Calliope mini."
-  },
-  "calliopemini.pin_RGB.summary": {
-    "message": "Ein RGB-Pin auf der Vorderseite des Calliope mini.",
-    "description": "A pin on the front of the Calliope mini."
-  },
   "calliopemini.pin_logo": {
     "message": "pin logo",
-    "description": "(field name) A touch sensitive logo pin on the front of the Calliope mini, which by default is set to capacitive touch mode."
+    "description": "(field name) A touch sensitive logo pin on the back of the Calliope mini, which by default is set to capacitive touch mode."
   },
   "calliopemini.pin_logo.summary": {
-    "message": "Ein Touch-Pin auf der Rückseite des Calliope mini, der standardmäßig auf den kapazitiven Berührungsmodus eingestellt ist.",
-    "description": "A touch sensitive logo pin on the front of the Calliope mini, which by default is set to capacitive touch mode."
+    "message": "Ein Touch-Pin auf der Rückseite des Calliope mini, der standardmäßig auf den kapazitiven Touch-Modus eingestellt ist.",
+    "description": "A touch sensitive logo pin on the back of the Calliope mini, which by default is set to capacitive touch mode."
+  },
+  "calliopemini.pin_RGB": {
+    "message": "pin rgb",
+    "description": "(field name) RGB-LEDs on internal pin."
+  },
+  "calliopemini.pin_RGB.summary": {
+    "message": "Interne RGB-LEDs.",
+    "description": "RGB-LEDs on internal pin."
   },
   "calliopemini.pin_speaker": {
     "message": "pin speaker",
@@ -1828,7 +1828,7 @@
     "description": "(module name) Play sounds using the Calliope mini (import ``audio`` for V1,V2 compatibility)."
   },
   "calliopemini.audio.summary": {
-    "message": "Töne mit dem Calliope mini abspielen (Import {{audio}} für V1/V2, V3 Kompatibilität).",
+    "message": "Töne mit dem Calliope mini (V3) abspielen.",
     "description": "Play sounds using the Calliope mini (import ``audio`` for V1,V2 compatibility)."
   },
   "calliopemini.audio.play": {
@@ -2177,11 +2177,11 @@
   },
   "calliopemini.compass.is_calibrated": {
     "message": "is calibrated",
-    "description": "(function name) Check is the compass is calibrated."
+    "description": "(function name) Check if the compass is calibrated."
   },
   "calliopemini.compass.is_calibrated.summary": {
     "message": "Überprüft, ob der Kompass kalibriert ist.",
-    "description": "Check is the compass is calibrated."
+    "description": "Check if the compass is calibrated."
   },
   "calliopemini.compass.clear_calibration": {
     "message": "clear calibration",
@@ -2697,10 +2697,10 @@
   },
   "calliopemini.spi.init.param-name.mode": {
     "message": "mode",
-    "description": "(parameter name) Determines the combination of clock polarity and phase - `see online table <https://microbit-micropython.readthedocs.io/en/v2-docs/spi.html#microbit.spi.init>`_."
+    "description": "(parameter name) Determines the combination of clock polarity and phase - `see online table <https://calliope.cc/programmieren/editoren/python/python-api>`_."
   },
   "calliopemini.spi.init.param-doc.mode": {
-    "message": "Bestimmt die Kombination von Taktpolarität und Phase - `siehe Online-Tabelle <https://calliope.cc/programmieren/editoren/python/python-api#spiinit>`_.",
+    "message": "Bestimmt die Kombination von Taktpolarität und Phase - `siehe Online-Tabelle <https://calliope.cc/programmieren/editoren/python/python-api>`_.",
     "description": "Parameter docs"
   },
   "calliopemini.spi.init.param-name.mosi": {
@@ -3561,11 +3561,11 @@
   },
   "math.isnan": {
     "message": "isnan",
-    "description": "(function name) Check is a value is not-a-number (NaN)."
+    "description": "(function name) Check if a value is not-a-number (NaN)."
   },
   "math.isnan.summary": {
-    "message": "Prüft, ob ein Wert eine Nicht-Zahl (NaN) ist.",
-    "description": "Check is a value is not-a-number (NaN)."
+    "message": "Prüft, ob ein Wert keine Zahl (NaN ... Not A Number) ist.",
+    "description": "Check if a value is not-a-number (NaN)."
   },
   "math.isnan.param-name.x": {
     "message": "x",
@@ -4105,10 +4105,10 @@
   },
   "music.play.param-name.music": {
     "message": "music",
-    "description": "(parameter name) music specified in `a special notation <https://microbit-micropython.readthedocs.io/en/v2-docs/music.html#musical-notation>`_"
+    "description": "(parameter name) music specified in `a special notation <https://calliope.cc/programmieren/editoren/python/python-api`_"
   },
   "music.play.param-doc.music": {
-    "message": "Musik in einer `speziellen Notation <https://calliope.cc/programmieren/editoren/python/python-api#musicalnotation>`_ angegeben",
+    "message": "Musik die in `einer speziellen Notation <https://calliope.cc/programmieren/editoren/python/python-api>`_ angegeben ist.",
     "description": "Parameter docs"
   },
   "music.play.param-name.pin": {
@@ -4737,11 +4737,11 @@
   },
   "random.random": {
     "message": "random",
-    "description": "(function name) Generate a random floating point number in the range [0.0, 1.0)."
+    "description": "(function name) Generate a random floating point number in the range [0.0, 1.0]."
   },
   "random.random.summary": {
-    "message": "Erzeugt eine zufällige Fließkommazahl im Bereich [0,0, 1,0].",
-    "description": "Generate a random floating point number in the range [0.0, 1.0)."
+    "message": "Erzeugt eine zufällige Fließkommazahl im Bereich [0.0, 1.0].",
+    "description": "Generate a random floating point number in the range [0.0, 1.0]."
   },
   "random.uniform": {
     "message": "uniform",

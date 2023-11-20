@@ -1,4 +1,4 @@
-"""Töne mit dem Calliope mini abspielen (Import ``audio`` für V1/V2, V3 Kompatibilität)."""
+"""Töne mit dem Calliope mini (V3) abspielen."""
 from ..calliope import MicroBitDigitalPin, Sound, pin0
 from typing import ClassVar, Iterable, Union
 

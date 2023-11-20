@@ -401,7 +401,7 @@ pin_A0_SDA:   MicroBitDigitalPin
 pin_A0_SCL:   MicroBitDigitalPin
 """Pin with digital features."""
 
-pin_A1_RX:    MicroBitDigitalPin
+pin_A1_RX:    MicroBitAnalogDigitalPin
 """Pin with digital features."""
 
 pin_A1_TX:    MicroBitDigitalPin

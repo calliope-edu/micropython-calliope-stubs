@@ -63,7 +63,7 @@ If ``seq`` is  empty, raises ``IndexError``."""
     ...
 
 def random() -> float:
-    """Erzeugt eine zufällige Fließkommazahl im Bereich [0,0, 1,0].
+    """Erzeugt eine zufällige Fließkommazahl im Bereich [0.0, 1.0].
 
 Example: ``random.random()``
 

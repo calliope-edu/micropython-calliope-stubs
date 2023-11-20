@@ -11,7 +11,7 @@ For correct communication, the parameters have to be the same on both communicat
 
 :param baudrate: Die Geschwindigkeit der Kommunikation.
 :param bits: Die Breite in Bits jeder Übertragung. Derzeit werden nur ``bits=8`` unterstützt. Dies kann sich jedoch in Zukunft ändern.
-:param mode: Bestimmt die Kombination von Taktpolarität und Phase - `siehe Online-Tabelle <https://calliope.cc/programmieren/editoren/python/python-api#spiinit>`_.
+:param mode: Bestimmt die Kombination von Taktpolarität und Phase - `siehe Online-Tabelle <https://calliope.cc/programmieren/editoren/python/python-api>`_.
 :param sclk: sclk Pin (Standard 13)
 :param mosi: miso Pin (Standard 15)
 :param miso: miso Pin (Standard 14)"""

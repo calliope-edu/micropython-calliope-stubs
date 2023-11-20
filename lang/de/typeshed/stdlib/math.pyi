@@ -143,7 +143,7 @@ Example: ``math.isinf(float('-inf'))``
     ...
 
 def isnan(x: float) -> bool:
-    """Prüft, ob ein Wert eine Nicht-Zahl (NaN) ist.
+    """Prüft, ob ein Wert keine Zahl (NaN ... Not A Number) ist.
 
 Example: ``math.isnan(float('nan'))``
 

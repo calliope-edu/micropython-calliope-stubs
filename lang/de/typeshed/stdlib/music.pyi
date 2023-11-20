@@ -84,7 +84,7 @@ def play(music: Union[str, List[str], Tuple[str, ...]], pin: Optional[MicroBitDi
 
 Example: ``music.play(music.NYAN)``
 
-:param music: Musik in einer `speziellen Notation <https://calliope.cc/programmieren/editoren/python/python-api#musicalnotation>`_ angegeben
+:param music: Musik die in `einer speziellen Notation <https://calliope.cc/programmieren/editoren/python/python-api>`_ angegeben ist.
 :param pin: Der Ausgabepin für den Einsatz mit einem externen Lautsprecher (Standard ``pin0``), ``None`` für keinen Klang.
 :param wait: Wenn ``wait`` auf ``True`` gesetzt ist, blockiert diese Funktion.
 :param loop: Wenn ``loop`` auf ``True`` gesetzt ist, wird die Melodie wiederholt, bis ``stop`` aufgerufen oder der blockierende Aufruf unterbrochen wird.

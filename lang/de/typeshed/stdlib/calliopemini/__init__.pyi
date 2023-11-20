@@ -12,7 +12,7 @@ from . import spi as spi
 from . import uart as uart
 
 def run_every(callback: Optional[Callable[[], None]]=None, days: int=0, h: int=0, min: int=0, s: int=0, ms: int=0) -> Callable[[Callable[[], None]], Callable[[], None]]:
-    """Zeitplan für die Ausführung einer Funktion in dem durch die Zeitargumente festgelegten Intervall **nur V3**. (run_every)
+    """Zeitplan für die Ausführung einer Funktion in dem durch die Zeitargumente festgelegten Intervall **nur V3**. (alle)
 
 Example: ``run_every(my_logging, min=5)``
 
@@ -91,7 +91,7 @@ If they are both integers (i.e ``10``), it will return an integer::
 
 :param value: Eine zu konvertierende Zahl.
 :param from_: Ein Tupel (das ist eine geordnete Sammlung von Werten), um den Bereich festzulegen, aus dem konvertiert werden soll.
-:param to: Ein Tupel (eine geordnete Sammlung von Werten), um den Bereich festzulegen, zu dem konvertiert werden soll.
+:param to: Ein Tupel  (eine geordnete Sammlung von Werten), um den Bereich festzulegen, zu dem konvertiert werden soll.
 :return: The ``value`` converted to the ``to`` range."""
 
 def sleep(n: float) -> None:
@@ -157,7 +157,7 @@ button_b: Button
 """Das ``Button`` Objekt der rechten Taste."""
 
 class MicroBitDigitalPin:
-    """Ein digitaler Pin. (digitalpin)
+    """Ein digitaler Pin.
 
 Some pins support analog and touch features using the ``MicroBitAnalogDigitalPin`` and ``MicroBitTouchPin`` subclasses."""
     NO_PULL: int
@@ -177,7 +177,7 @@ Example: ``value = pin0.read_digital()``
 
 Example: ``pin0.write_digital(1)``
 
-:param value: 1, um den Pin auf high zu setzen, oder 0, um den Pin auf low zu setzen"""
+:param value: 1, um den Pin auf high zu setzen – oder 0, um den Pin auf low zu setzen"""
         ...
 
     def set_pull(self, value: int) -> None:
@@ -212,11 +212,11 @@ changes.
         ...
 
     def write_analog(self, value: int) -> None:
-        """Gibt ein PWM-Signal an den Pin aus, dessen Einschaltdauer proportional zu ``value`` ist.
+        """Gib ein PWM-Signal am Pin aus, bei dem das Verhältnis von An- zu Auszeit proportional zu ``Wert`` ist.
 
 Example: ``pin0.write_analog(254)``
 
-:param value: (Gib ein PWM-Signal am Pin aus, bei dem das Verhältnis von An- zu Auszeit proportional zu {{Wert}} ist.) Eine Ganzzahl oder eine Fließkommazahl zwischen 0 (0% Einschaltdauer) und 1023 (100% Einschaltdauer)."""
+:param value: Eine Ganzzahl oder eine Fließkommazahl zwischen 0 (0% Einschaltdauer) und 1023 (100% Einschaltdauer)."""
 
     def set_analog_period(self, period: int) -> None:
         """Setzt den Zeitraum des PWM-Signals, das ausgegeben wird, auf ``period`` in Millisekunden.
@@ -233,7 +233,7 @@ Example: ``pin0.set_analog_period_microseconds(512)``
 :param period: Die Periode in Mikrosekunden mit einem Mindestwert von 256μs."""
 
 class MicroBitAnalogDigitalPin(MicroBitDigitalPin):
-    """Pin mit analogen und digitalen Eigenschaften. (analogdigitalpin)"""
+    """Ein Pin mit analogen und digitalen Eigenschaften."""
 
     def read_analog(self) -> int:
         """Gibt die Spannung aus, die an dem Pin anliegt.
@@ -243,7 +243,7 @@ Example: ``pin0.read_analog()``
 :return: An integer between 0 (meaning 0V) and 1023 (meaning 3.3V)."""
 
 class MicroBitTouchPin(MicroBitAnalogDigitalPin):
-    """Pin mit analogen-, digitalen- und Touch-Funktionen. (touchpin)"""
+    """Ein Pin mit Analog-, Digital- und Touch-Funktionen."""
     CAPACITIVE: int
     RESISTIVE: int
 
@@ -278,7 +278,7 @@ Example: ``pin0.set_touch_mode(pin0.CAPACITIVE)``
 The default touch mode for the pins on the edge connector is
 ``resistive``. The default for the logo pin **V3** is ``capacitive``.
 
-:param value: ``CAPACITIVE`` oder ``RESISTIVE`` von dem entsprechenden Pin."""
+:param value: ``CAPACITIVE`` oder ``RESISTIVE`` Touch-Modus des entsprechenden Pins."""
         ...
 pin0: MicroBitTouchPin
 """Pin mit digitalen, analogen und Touch-Funktionen."""
@@ -287,7 +287,7 @@ pin1: MicroBitTouchPin
 pin2: MicroBitTouchPin
 """Pin mit digitalen, analogen und Touch-Funktionen."""
 pin3: MicroBitTouchPin
-"""Pin mit digitalen-, analogen- und Touch-Funktionen."""
+"""Pin mit digitalen und Touch-Funktionen."""
 pin4: MicroBitAnalogDigitalPin
 """Pin mit digitalen und analogen Funktionen."""
 pin5: MicroBitDigitalPin
@@ -317,15 +317,15 @@ pin16: MicroBitAnalogDigitalPin
 pin17: MicroBitDigitalPin
 """Pin mit digitalen Funktionen."""
 pin18: MicroBitAnalogDigitalPin
-"""Pin mit digitalen Funktionen."""
+"""Pin mit digitalen und analogen Funktionen."""
 pin19: MicroBitDigitalPin
 """Pin mit digitalen Funktionen."""
 pin20: MicroBitDigitalPin
 """Pin mit digitalen Funktionen."""
 pin_logo: MicroBitTouchPin
-"""Ein Touch-Pin auf der Rückseite des Calliope mini, der standardmäßig auf den kapazitiven Berührungsmodus eingestellt ist."""
+"""Ein Touch-Pin auf der Rückseite des Calliope mini, der standardmäßig auf den kapazitiven Touch-Modus eingestellt ist."""
 pin_RGB: MicroBitDigitalPin
-"""Ein RGB-Pin auf der Vorderseite des Calliope mini. (pin RGB)"""
+"""Interne RGB-LEDs."""
 pin_speaker: MicroBitAnalogDigitalPin
 """Ein Pin um den Calliope mini Lautsprecher anzusprechen.
 
@@ -343,7 +343,7 @@ pin_A0_SDA: MicroBitDigitalPin
 """Pin mit digitalen Funktionen."""
 pin_A0_SCL: MicroBitDigitalPin
 """Pin mit digitalen Funktionen."""
-pin_A1_RX: MicroBitDigitalPin
+pin_A1_RX: MicroBitAnalogDigitalPin
 """Pin mit digitalen Funktionen."""
 pin_A1_TX: MicroBitDigitalPin
 """Pin mit digitalen Funktionen."""
